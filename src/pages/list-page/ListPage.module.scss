@@ -1,19 +1,17 @@
 $border-color: #23211b;
 
 .page {
-  display: flex;
-  flex-direction: row;
-  column-gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 16px;
   height: 100%;
 }
 
 .item {
-  display: inline-block;
+  height: 100%;
 }
 
 .list {
-  width: 280px;
-  flex-shrink: 0;
   padding: 8px;
   border: 2px solid $border-color;
 }
@@ -24,6 +22,7 @@ $border-color: #23211b;
 }
 
 .info {
+  overflow-y: auto;
   padding: 18px;
   border: 2px solid $border-color;
 }
