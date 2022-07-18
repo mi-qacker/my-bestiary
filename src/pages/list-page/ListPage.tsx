@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import {ListObjects} from "features/list-objects";
-import {ObjectImage} from "features/object-image";
-import {ObjectInfo} from "features/object-info";
-import styles from "./ListPage.module.scss";
+import classNames from 'classnames';
+import {ListObjects} from 'features/list-objects';
+import {ObjectImage} from 'features/object-image';
+import {ObjectInfo} from 'features/object-info';
+import styles from './ListPage.module.scss';
 
 export const ListPage = () => {
     return (

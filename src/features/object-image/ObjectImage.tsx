@@ -4,8 +4,8 @@ export const ObjectImage = () => {
     return (
         <div className={styles.wrapper}>
             <img className={styles.image}
-                 src='/object.jpg'
-                 alt='test'/>
+                 src="/object.jpg"
+                 alt="test"/>
         </div>
     );
 };
