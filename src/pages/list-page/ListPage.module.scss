@@ -1,0 +1,29 @@
+$border-color: #23211b;
+
+.page {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  height: 100%;
+}
+
+.item {
+  display: inline-block;
+}
+
+.list {
+  width: 280px;
+  flex-shrink: 0;
+  padding: 8px;
+  border: 2px solid $border-color;
+}
+
+.image {
+  padding: 8px;
+  border: 2px solid $border-color;
+}
+
+.info {
+  padding: 18px;
+  border: 2px solid $border-color;
+}
