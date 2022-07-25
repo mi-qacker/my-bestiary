@@ -1,11 +1,11 @@
-import { ListPage } from 'pages/list-page';
-import { Wrapper } from 'shared/ui/wrapper';
+import {withRouter} from 'app/providers';
+import {Routing} from 'pages';
 import './index.scss';
 
-export const App = () => {
-	return (
-		<Wrapper>
-			<ListPage />
-		</Wrapper>
-	);
+const App = () => {
+    return (
+        <Routing/>
+    );
 };
+
+export default withRouter(App);
