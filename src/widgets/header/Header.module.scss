@@ -1,0 +1,15 @@
+.header {
+  box-sizing: border-box;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 2px solid #393029;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  font-size: 24px;
+  cursor: pointer;
+}
