@@ -1,0 +1,11 @@
+.item {
+  padding: 8px;
+  font-size: 20px;
+  border: 2px solid #393029;
+  border-radius: 5px;
+
+  &:hover {
+    background: #1C1A1C;
+    cursor: pointer;
+  }
+}

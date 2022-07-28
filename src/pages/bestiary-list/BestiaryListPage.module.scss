@@ -1,0 +1,21 @@
+.page {
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  column-gap: 16px;
+}
+
+.block {
+  border: 2px solid #393029;
+  border-radius: 4px;
+}
+
+.list {
+  width: 100px;
+  flex-grow: 3;
+}
+
+.info {
+  width: 100px;
+  flex-grow: 9;
+}
