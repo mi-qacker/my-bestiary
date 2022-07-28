@@ -1,0 +1,16 @@
+.button {
+  padding: 2px 14px;
+  background: #1C1A1C;
+  border: 1px solid #434343;
+  border-radius: 4px;
+  color: white;
+
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 24px;
+
+  &:hover {
+    background-color: #434343;
+  }
+}
