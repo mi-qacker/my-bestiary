@@ -1,4 +1,4 @@
-import {LoginForm} from 'features/sign-in';
+import {LoginForm} from 'features/auth';
 import {Layout} from 'shared/ui/layout';
 import {Header} from 'widgets/header';
 import styles from './SignInPage.module.scss';

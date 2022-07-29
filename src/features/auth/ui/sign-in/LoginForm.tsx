@@ -1,6 +1,6 @@
 import {Button} from 'shared/ui/button';
 import {FormField} from 'shared/ui/form-field';
-import styles from './LoginForm.module.scss';
+import styles from '../Form.module.scss';
 
 export const LoginForm = () => {
     return (
