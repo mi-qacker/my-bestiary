@@ -4,7 +4,7 @@ import {Header} from 'widgets/header';
 export const SignUpPage = () => {
     return (
         <Layout>
-            <Header/>
+            <Header page="sign-up"/>
             <h1>SignUpPage</h1>
         </Layout>
     );
