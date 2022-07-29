@@ -1,7 +1,7 @@
+import styles from 'pages/bestiary-list/ui/list-toolbar/ListToolbar.module.scss';
 import {useCallback} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {Button} from 'shared/ui/button';
-import styles from './ListToolbar.module.scss';
 
 export const ListToolbar = () => {
     let navigate = useNavigate();

@@ -1,6 +1,6 @@
-import {ListItem} from 'features/objects-list/ui/list-item/ListItem';
-import {ListToolbar} from 'features/objects-list/ui/list-toolbar/ListToolbar';
-import styles from './ObjectList.module.scss';
+import styles from 'pages/bestiary-list/ui/objects-list/ObjectList.module.scss';
+import {ListItem} from '../list-item/ListItem';
+import {ListToolbar} from '../list-toolbar/ListToolbar';
 
 export const ObjectList = () => {
     return (

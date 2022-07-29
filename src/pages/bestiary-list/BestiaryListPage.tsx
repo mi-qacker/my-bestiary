@@ -1,9 +1,9 @@
 import classNames from 'classnames/bind';
 import {ObjectInfo} from 'entities/object';
-import {ObjectList} from 'features/objects-list';
 import {Layout} from 'shared/ui/layout';
 import {Header} from 'widgets/header';
 import styles from './BestiaryListPage.module.scss';
+import {ObjectList} from './ui/objects-list/ObjectList';
 
 export const BestiaryListPage = () => {
     return (

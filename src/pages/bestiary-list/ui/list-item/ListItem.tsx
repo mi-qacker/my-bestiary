@@ -1,4 +1,4 @@
-import styles from 'features/objects-list/ui/list-item/ListItem.module.scss';
+import styles from 'pages/bestiary-list/ui/list-item/ListItem.module.scss';
 
 interface ListItemProps {
     name: string;
