@@ -1,6 +1,8 @@
+import {yupResolver} from '@hookform/resolvers/yup';
 import {SubmitHandler, useForm} from 'react-hook-form';
 import {Button} from 'shared/ui/button';
 import {FormField} from 'shared/ui/form-field';
+import * as Yup from 'yup';
 import styles from '../Form.module.scss';
 
 interface LoginFormValues {
@@ -8,8 +10,21 @@ interface LoginFormValues {
     password: string;
 }
 
+const schema = Yup.object({
+    email: Yup.string()
+        .email('Email имеет неверный формат')
+        .required('Обязательно для заполнения'),
+    password: Yup.string()
+        .required('Обязательно для заполнения')
+        .min(8, 'Минимальная длина пароля 8 символов'),
+});
+
 export const LoginForm = () => {
-    const {register, formState: {errors}, handleSubmit} = useForm<LoginFormValues>();
+    const {
+        register,
+        formState: {errors},
+        handleSubmit,
+    } = useForm<LoginFormValues>({resolver: yupResolver(schema)});
     const onSubmit: SubmitHandler<LoginFormValues> = data => console.log(data);
 
     return (
@@ -19,9 +34,9 @@ export const LoginForm = () => {
             </div>
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.fields}>
-                    <FormField label="Email" id="email" type="text" register={register} error={errors.email} required/>
+                    <FormField label="Email" id="email" type="text" register={register} error={errors.email}/>
                     <FormField label="Пароль" id="password" type="password" register={register}
-                               error={errors.password} required/>
+                               error={errors.password}/>
                 </div>
                 <div className={styles.button}>
                     <Button text="Войти" size="big"/>
