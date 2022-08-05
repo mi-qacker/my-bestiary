@@ -8,7 +8,11 @@
   font-weight: bold;
   line-height: 24px;
 
-  &:hover {
+  &:disabled {
+    color: #434343;
+  }
+
+  &:hover:enabled {
     background-color: #434343;
   }
 }
