@@ -1,6 +1,7 @@
 import {yupResolver} from '@hookform/resolvers/yup';
 import {SubmitHandler, useForm} from 'react-hook-form';
-import {useFirebaseAuth} from 'shared/api/firebase';
+import {Navigate} from 'react-router-dom';
+import {useCreateUser} from 'shared/api/firebase';
 import {Button} from 'shared/ui/button';
 import {FormField} from 'shared/ui/form-field';
 import * as Yup from 'yup';
@@ -25,16 +26,19 @@ const schema = Yup.object({
 });
 
 export const RegistrationForm = () => {
+    const {create, getErrorMessage, loading, user} = useCreateUser();
     const {
         register,
         handleSubmit,
         formState: {errors},
     } = useForm<RegistrationFormValues>({resolver: yupResolver(schema)});
-    const {loading, getErrorMessage, createNewUser} = useFirebaseAuth();
 
-    const onSubmit: SubmitHandler<RegistrationFormValues> = ({email, password}) => {
-        createNewUser(email, password);
+    const onSubmit: SubmitHandler<RegistrationFormValues> = async ({email, password}) => {
+        await create(email, password);
     };
+
+    if (user)
+        return <Navigate to="/"/>;
 
     return (
         <div className={styles.modal}>

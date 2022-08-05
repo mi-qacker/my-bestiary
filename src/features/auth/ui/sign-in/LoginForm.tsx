@@ -1,6 +1,7 @@
 import {yupResolver} from '@hookform/resolvers/yup';
 import {SubmitHandler, useForm} from 'react-hook-form';
-import {useFirebaseAuth} from 'shared/api/firebase';
+import {Navigate} from 'react-router-dom';
+import {useLoginUser} from 'shared/api/firebase';
 import {Button} from 'shared/ui/button';
 import {FormField} from 'shared/ui/form-field';
 import * as Yup from 'yup';
@@ -21,16 +22,19 @@ const schema = Yup.object({
 });
 
 export const LoginForm = () => {
-    const {loading, loginUser, getErrorMessage} = useFirebaseAuth();
+    const {login, getErrorMessage, loading, user} = useLoginUser();
     const {
         register,
         formState: {errors},
         handleSubmit,
     } = useForm<LoginFormValues>({resolver: yupResolver(schema)});
 
-    const onSubmit: SubmitHandler<LoginFormValues> = ({email, password}) => {
-        loginUser(email, password);
+    const onSubmit: SubmitHandler<LoginFormValues> = async ({email, password}) => {
+        await login(email, password);
     };
+
+    if (user)
+        return <Navigate to="/"/>;
 
     return (
         <div className={styles.modal}>
