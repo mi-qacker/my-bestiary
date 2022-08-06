@@ -1,0 +1,13 @@
+.page {
+  height: calc(100% - 48px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 450px;
+  height: 606px;
+  border: 2px solid #393029;
+  border-radius: 4px;
+}

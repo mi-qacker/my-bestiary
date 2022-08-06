@@ -1,0 +1,23 @@
+$text-color: white;
+$background-color: #030303;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cormorant', serif;
+  color: $text-color;
+
+  background-color: $background-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
