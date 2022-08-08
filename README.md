@@ -12,7 +12,7 @@
 - **Language:** `TypeScript`
 - **UI:** `React`
 - **Style:** `SCSS`
-- **Linters:** `ESLint`
+- **Linters:** `ESLint`, `Prettier`
 - **package manager:** `yarn`
 - **Architecture:** `feature-sliced`
 
