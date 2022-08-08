@@ -11,8 +11,7 @@ interface ButtonProps {
 export const Button = ({text, onButtonClick, size = 'normal', disabled = false}: ButtonProps) => {
     const buttonClass = classNames(styles.button, {[styles.big]: size === 'big'}, {[styles.normal]: size === 'normal'});
     const handleClick = () => {
-        if (onButtonClick)
-            onButtonClick();
+        if (onButtonClick) onButtonClick();
     };
 
     return (

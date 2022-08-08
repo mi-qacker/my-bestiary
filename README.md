@@ -9,12 +9,12 @@
 
 ## Технологический стек
 
-- **Language:** `TypeScript`
-- **UI:** `React`
-- **Style:** `SCSS`
-- **Linters:** `ESLint`, `Prettier`
-- **package manager:** `yarn`
-- **Architecture:** `feature-sliced`
+-   **Language:** `TypeScript`
+-   **UI:** `React`
+-   **Style:** `SCSS`
+-   **Linters:** `ESLint`, `Prettier`
+-   **package manager:** `yarn`
+-   **Architecture:** `feature-sliced`
 
 ---
 

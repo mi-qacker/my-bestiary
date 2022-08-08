@@ -13,12 +13,8 @@ interface LoginFormValues {
 }
 
 const schema = Yup.object({
-    email: Yup.string()
-        .email('Email имеет неверный формат')
-        .required('Обязательно для заполнения'),
-    password: Yup.string()
-        .required('Обязательно для заполнения')
-        .min(8, 'Минимальная длина пароля 8 символов'),
+    email: Yup.string().email('Email имеет неверный формат').required('Обязательно для заполнения'),
+    password: Yup.string().required('Обязательно для заполнения').min(8, 'Минимальная длина пароля 8 символов'),
 });
 
 export const LoginForm = () => {
@@ -33,8 +29,7 @@ export const LoginForm = () => {
         await login(email, password);
     };
 
-    if (user)
-        return <Navigate to="/"/>;
+    if (user) return <Navigate to="/" />;
 
     return (
         <div className={styles.modal}>
@@ -44,12 +39,17 @@ export const LoginForm = () => {
             <div className={styles.error}>{getErrorMessage()}</div>
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.fields}>
-                    <FormField label="Email" id="email" type="text" register={register} error={errors.email}/>
-                    <FormField label="Пароль" id="password" type="password" register={register}
-                               error={errors.password}/>
+                    <FormField label="Email" id="email" type="text" register={register} error={errors.email} />
+                    <FormField
+                        label="Пароль"
+                        id="password"
+                        type="password"
+                        register={register}
+                        error={errors.password}
+                    />
                 </div>
                 <div className={styles.button}>
-                    <Button text="Войти" size="big" disabled={loading}/>
+                    <Button text="Войти" size="big" disabled={loading} />
                 </div>
             </form>
         </div>

@@ -11,9 +11,7 @@ export const RequireAuth = ({children}: RequireAuthProps) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
 
-    if (loading)
-        return <LoadingSpinner/>;
-    if (user === null)
-        return <Navigate to="/sign-in" state={{from: location}} replace/>;
+    if (loading) return <LoadingSpinner />;
+    if (user === null) return <Navigate to="/sign-in" state={{from: location}} replace />;
     return children;
 };

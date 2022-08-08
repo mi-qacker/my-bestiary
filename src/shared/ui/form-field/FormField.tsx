@@ -15,7 +15,7 @@ export const FormField = (props: FormFieldProps) => {
     return (
         <div className={styles.field}>
             <label htmlFor={id}>{label}</label>
-            <input id={id} type={type} placeholder={label} {...register(id)}/>
+            <input id={id} type={type} placeholder={label} {...register(id)} />
             <div className={styles.error}>{error ? error.message : null}</div>
         </div>
     );

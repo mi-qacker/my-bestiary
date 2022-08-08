@@ -12,7 +12,7 @@ export const ListToolbar = () => {
     return (
         <div className={styles.toolbar}>
             <span>Список существ</span>
-            <Button text={'Добавить'} onButtonClick={handleClick}/>
+            <Button text={'Добавить'} onButtonClick={handleClick} />
         </div>
     );
 };

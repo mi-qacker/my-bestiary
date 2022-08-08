@@ -5,7 +5,7 @@ export const SignInPage = () => {
     return (
         <div className={styles.page}>
             <div className={styles.wrapper}>
-                <LoginForm/>
+                <LoginForm />
             </div>
         </div>
     );

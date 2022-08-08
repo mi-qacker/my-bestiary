@@ -8,8 +8,7 @@ export const useCreateUser = () => {
     };
 
     const getErrorMessage = () => {
-        if (!error)
-            return null;
+        if (!error) return null;
         switch (error.code) {
             case 'auth/email-already-in-use':
                 return 'Пользователь с таким Email уже существует';
@@ -17,7 +16,6 @@ export const useCreateUser = () => {
                 return `Неизвестная ошибка ${error}`;
         }
     };
-
 
     return {create, getErrorMessage, loading, user};
 };

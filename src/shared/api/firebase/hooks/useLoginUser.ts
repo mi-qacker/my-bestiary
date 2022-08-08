@@ -5,8 +5,7 @@ export const useLoginUser = () => {
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
     const getErrorMessage = () => {
-        if (!error)
-            return null;
+        if (!error) return null;
         switch (error.code) {
             case 'auth/user-not-found':
                 return 'Пользователя с таким Email не существует';
@@ -16,7 +15,6 @@ export const useLoginUser = () => {
                 return `Неизвестная ошибка ${error.code}`;
         }
     };
-
 
     const login = async (email: string, password: string) => {
         await signInWithEmailAndPassword(email, password);

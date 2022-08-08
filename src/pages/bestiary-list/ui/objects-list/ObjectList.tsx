@@ -5,11 +5,11 @@ import {ListToolbar} from '../list-toolbar/ListToolbar';
 export const ObjectList = () => {
     return (
         <>
-            <ListToolbar/>
+            <ListToolbar />
             <div className={styles.list}>
-                <ListItem name={'Черт'}/>
-                <ListItem name={'Циклоп'}/>
-                <ListItem name={'Леший'}/>
+                <ListItem name={'Черт'} />
+                <ListItem name={'Циклоп'} />
+                <ListItem name={'Леший'} />
             </div>
         </>
     );

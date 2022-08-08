@@ -8,7 +8,7 @@ interface LayoutProps {
 export const Layout = (props: LayoutProps) => {
     return (
         <div className={styles.layout}>
-            <Header/>
+            <Header />
             {props.children}
         </div>
     );

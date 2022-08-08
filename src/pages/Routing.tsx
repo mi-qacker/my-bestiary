@@ -10,10 +10,24 @@ export const Routing = () => {
     return (
         <Layout>
             <Routes>
-                <Route path="/sign-in" element={<SignInPage/>}/>
-                <Route path="/sign-up" element={<SignUpPage/>}/>
-                <Route path="/" element={<RequireAuth><BestiaryListPage/></RequireAuth>}/>
-                <Route path="/new" element={<RequireAuth><CreateNewPage/></RequireAuth>}/>
+                <Route path="/sign-in" element={<SignInPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
+                <Route
+                    path="/"
+                    element={
+                        <RequireAuth>
+                            <BestiaryListPage />
+                        </RequireAuth>
+                    }
+                />
+                <Route
+                    path="/new"
+                    element={
+                        <RequireAuth>
+                            <CreateNewPage />
+                        </RequireAuth>
+                    }
+                />
             </Routes>
         </Layout>
     );

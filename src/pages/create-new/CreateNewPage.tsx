@@ -1,5 +1,3 @@
 export const CreateNewPage = () => {
-    return (
-        <h1>CreateNewPage</h1>
-    );
+    return <h1>CreateNewPage</h1>;
 };

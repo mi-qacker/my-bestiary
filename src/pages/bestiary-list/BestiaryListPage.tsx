@@ -7,10 +7,10 @@ export const BestiaryListPage = () => {
     return (
         <div className={styles.page}>
             <div className={classNames(styles.list, styles.block)}>
-                <ObjectList/>
+                <ObjectList />
             </div>
             <div className={classNames(styles.info, styles.block)}>
-                <ObjectInfo/>
+                <ObjectInfo />
             </div>
         </div>
     );

@@ -5,7 +5,6 @@ import {auth} from 'shared/lib/firebase';
 import {Button} from 'shared/ui/button';
 import styles from './Header.module.scss';
 
-
 export const Header = () => {
     const location = useLocation();
     const [user] = useAuthState(auth);
@@ -17,15 +16,23 @@ export const Header = () => {
     const renderLastLink = () => {
         switch (location.pathname) {
             case '/sign-in':
-                return <Link to="/sign-up" className={styles.link}>Регистрация</Link>;
+                return (
+                    <Link to="/sign-up" className={styles.link}>
+                        Регистрация
+                    </Link>
+                );
             case '/sign-up':
-                return <Link to="/sign-in" className={styles.link}>Войти</Link>;
+                return (
+                    <Link to="/sign-in" className={styles.link}>
+                        Войти
+                    </Link>
+                );
         }
         if (user)
             return (
                 <div className={styles.user}>
                     <span>{user.email}</span>
-                    <Button text="Выйти" onButtonClick={handleLogout}/>
+                    <Button text="Выйти" onButtonClick={handleLogout} />
                 </div>
             );
         return null;
@@ -33,7 +40,9 @@ export const Header = () => {
 
     return (
         <div className={styles.header}>
-            <Link to="/" className={styles.link}>Бестиарий</Link>
+            <Link to="/" className={styles.link}>
+                Бестиарий
+            </Link>
             {renderLastLink()}
         </div>
     );

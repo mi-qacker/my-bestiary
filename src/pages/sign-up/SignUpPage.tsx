@@ -5,7 +5,7 @@ export const SignUpPage = () => {
     return (
         <div className={styles.page}>
             <div className={styles.wrapper}>
-                <RegistrationForm/>
+                <RegistrationForm />
             </div>
         </div>
     );
