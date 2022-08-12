@@ -1,6 +1,6 @@
 import {HTMLInputTypeAttribute} from 'react';
 import {FieldError, UseFormRegister} from 'react-hook-form';
-import styles from './FormField.module.scss';
+import styles from '../Forms.module.scss';
 
 interface FormFieldProps {
     id: string;

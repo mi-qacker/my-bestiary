@@ -3,7 +3,7 @@ import {SubmitHandler, useForm} from 'react-hook-form';
 import {Navigate} from 'react-router-dom';
 import {useLoginUser} from 'shared/api/firebase';
 import {Button} from 'shared/ui/button';
-import {FormField} from 'shared/ui/form-field';
+import {FormField} from 'shared/ui/form-components';
 import * as Yup from 'yup';
 import styles from '../Form.module.scss';
 

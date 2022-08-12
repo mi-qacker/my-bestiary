@@ -12,7 +12,7 @@ $text-color: #818181;
     padding: 0 12px;
   }
 
-  input {
+  input, textarea {
     width: 100%;
     padding: 8px 12px;
     background: #1c1a1c;
@@ -23,6 +23,11 @@ $text-color: #818181;
     color: $text-color;
   }
 
+  textarea {
+    resize: none;
+    height: 100%;
+  }
+
   .error {
     height: 20px;
     padding: 0 12px;
@@ -30,4 +35,8 @@ $text-color: #818181;
     line-height: 20px;
     color: $text-color;
   }
+}
+
+.textarea {
+  height: 100%;
 }
