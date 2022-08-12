@@ -1,0 +1,12 @@
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fields {
+  padding: 16px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
