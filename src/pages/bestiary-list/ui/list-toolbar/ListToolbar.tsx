@@ -6,7 +6,7 @@ import {Button} from 'shared/ui/button';
 export const ListToolbar = () => {
     let navigate = useNavigate();
     const handleClick = useCallback(() => {
-        navigate('/new');
+        navigate('/create');
     }, [navigate]);
 
     return (
