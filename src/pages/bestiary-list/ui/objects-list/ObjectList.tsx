@@ -1,16 +1,20 @@
+import {ObjectModel} from 'entities/object';
 import styles from 'pages/bestiary-list/ui/objects-list/ObjectList.module.scss';
 import {ListItem} from '../list-item/ListItem';
 import {ListToolbar} from '../list-toolbar/ListToolbar';
 
-export const ObjectList = () => {
+interface ObjectListProps {
+    objects: ObjectModel[];
+}
+
+export const ObjectList = ({objects}: ObjectListProps) => {
+    const renderList = () => {
+        return objects.map((object) => <ListItem name={object.name} key={object.id} />);
+    };
     return (
         <>
             <ListToolbar />
-            <div className={styles.list}>
-                <ListItem name={'Черт'} />
-                <ListItem name={'Циклоп'} />
-                <ListItem name={'Леший'} />
-            </div>
+            <div className={styles.list}>{renderList()}</div>
         </>
     );
 };
