@@ -8,9 +8,9 @@ import styles from './BestiaryListPage.module.scss';
 import {ObjectList} from './ui/objects-list/ObjectList';
 
 export const BestiaryListPage = () => {
-    const {userId} = useParams();
+    const {userId, objectId} = useParams();
     const [objects, setObjects] = useState<ObjectModel[]>([]);
-    
+
     useEffect(() => {
         const objectListRef = ref(db, `objects/${userId}`);
         onValue(objectListRef, (snapshot) => {
@@ -27,9 +27,15 @@ export const BestiaryListPage = () => {
             <div className={classNames(styles.list, styles.block)}>
                 <ObjectList objects={objects} />
             </div>
-            <div className={classNames(styles.info, styles.block)}>
-                <Outlet />
-            </div>
+            <div className={classNames(styles.info, styles.block)}>{objectId ? <Outlet /> : <NonSelect />}</div>
+        </div>
+    );
+};
+
+const NonSelect = () => {
+    return (
+        <div className={styles.nonSelect}>
+            <span>Выбери героя из списка</span>
         </div>
     );
 };
